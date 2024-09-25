@@ -13,7 +13,6 @@ from .datasets_wrapper import Dataset
 
 
 def get_mosaic_coordinate(mosaic_image, mosaic_index, xc, yc, w, h, input_h, input_w):
-    # TODO update doc
     # index0 to top left part of image
     if mosaic_index == 0:
         x1, y1, x2, y2 = max(xc - w, 0), max(yc - h, 0), xc, yc
@@ -202,7 +201,7 @@ class MosaicDetection(Dataset):
             (int(img.shape[1] * cp_scale_ratio), int(img.shape[0] * cp_scale_ratio)),
             interpolation=cv2.INTER_LINEAR,
         ).astype(np.float32)
-        cp_img[     #将图片添加进mask
+        cp_img[     # add the image to the mask
             : int(img.shape[0] * cp_scale_ratio), : int(img.shape[1] * cp_scale_ratio)
         ] = resized_img
         cp_img = cv2.resize(
@@ -215,8 +214,8 @@ class MosaicDetection(Dataset):
             (int(imgl.shape[1] * cp_scale_ratiol), int(imgl.shape[0] * cp_scale_ratiol)),
             interpolation=cv2.INTER_LINEAR,
         ).astype(np.float32)
-        cp_imgl[  # 将图片添加进mask
-        : int(imgl.shape[0] * cp_scale_ratiol), : int(imgl.shape[1] * cp_scale_ratiol)
+        cp_imgl[  # add the image to the mask
+            : int(imgl.shape[0] * cp_scale_ratiol), : int(imgl.shape[1] * cp_scale_ratiol)
         ] = resized_imgl
         cp_imgl = cv2.resize(
             cp_imgl,
@@ -228,8 +227,8 @@ class MosaicDetection(Dataset):
             (int(imgv.shape[1] * cp_scale_ratiov), int(imgv.shape[0] * cp_scale_ratiov)),
             interpolation=cv2.INTER_LINEAR,
         ).astype(np.float32)
-        cp_imgv[  # 将图片添加进mask
-        : int(imgv.shape[0] * cp_scale_ratiov), : int(imgv.shape[1] * cp_scale_ratiov)
+        cp_imgv[  # add the image to the mask
+            : int(imgv.shape[0] * cp_scale_ratiov), : int(imgv.shape[1] * cp_scale_ratiov)
         ] = resized_imgv
         cp_imgv = cv2.resize(
             cp_imgv,
@@ -238,7 +237,7 @@ class MosaicDetection(Dataset):
 
         cp_scale_ratio *= jit_factor
         if FLIP:
-            cp_img = cp_img[:, ::-1, :]   #图片反转
+            cp_img = cp_img[:, ::-1, :]   # reverse the photo
             cp_imgl = cp_imgl[:, ::-1, :]
             cp_imgv = cp_imgv[:, ::-1, :]
 

@@ -17,7 +17,9 @@ chi2inv95 = {
     6: 12.592,
     7: 14.067,
     8: 15.507,
-    9: 16.919}
+    9: 16.919,
+}
+
 def is_positive_definite(matrix):
     # Check if all eigenvalues are positive
     if np.any(np.isinf(matrix)) or np.any(np.isnan(matrix)):
@@ -28,23 +30,25 @@ def is_positive_definite(matrix):
         return True
     except scipy.linalg.LinAlgError:
         return False
+
 def ensure_positive_definite(covariance):
     # If the matrix is not positive definite
     if not is_positive_definite(covariance):
         min_val = np.finfo(np.float64).tiny
         covariance += np.eye(covariance.shape[0]) * min_val
-        # identity_matrix = np.eye(covariance.shape[0])  # 以10的幂为单位逐渐增加正则化项，直到矩阵变为正定
+        # identity_matrix = np.eye(covariance.shape[0])  # using the identity matrix as regularization
         # for exponent in range(-10, 1):
         #     try:
         #         regularized_matrix = covariance + (10 ** exponent) * identity_matrix
         #         scipy.linalg.cholesky(regularized_matrix)
-        #         # 如果没有抛出异常，则已找到正则化项
+        #         # if no exception is thrown, the regularized matrix is found
         #         return regularized_matrix
         #     except scipy.linalg.LinAlgError:
         #         continue
         return covariance
     else:
         return covariance
+
 
 class KalmanFilter(object):
     """
@@ -314,5 +318,3 @@ class KalmanFilter(object):
             return squared_euclidean
         else:
             raise ValueError('invalid distance metric')
-
-
