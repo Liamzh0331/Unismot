@@ -172,7 +172,7 @@ python tools/mix_data_UniRTL.py
 Pretrained models trained on half of the UniRTL training set and evaluated on the UniRTL test set are available for download:
 
 - **Baidu Pan:** [Pretrained Models (code: liam)](https://pan.baidu.com/s/1fBiFya4bUUTqm6-D0rYykA?pwd=liam)
-- **Google Drive:** [Pretrained Models](https://drive.google.com/drive/folders/your_google_drive_link_here)
+- **Google Drive:** [Pretrained Models](https://drive.google.com/file/d/1KcPOrML6lNvglUXi9ghTOZe6CG2aqciS/view?usp=drive_link)
 
 ### **Available Models**
 
@@ -237,8 +237,8 @@ python tools/demo_track.py -f exps/example/mot/unismot_l_RGBTL2.py -c pretrained
 
 Download evaluation tools:
 
-- **SOT Evaluation Toolkit:** [UniRTL Evaluation Toolkit (Baidu Pan)](https://pan.baidu.com/s/1_YQn9bO7UFNGjdrWWWHmzw?pwd=liam) | [(Google Drive)](https://drive.google.com/drive/folders/your_google_drive_link_here)
-- **MOT Evaluation Tools:** [TrackEval (Baidu Pan)](https://pan.baidu.com/s/1HtVB1-knH03Oyg1C24sJkg?pwd=liam) | [(Google Drive)](https://drive.google.com/drive/folders/your_google_drive_link_here)
+- **SOT Evaluation Toolkit:** [UniRTL Evaluation Toolkit (Baidu Pan)](https://pan.baidu.com/s/1_YQn9bO7UFNGjdrWWWHmzw?pwd=liam) | [(Google Drive)](https://drive.google.com/file/d/11mIg7WSITaJZfytmkrwxOZ28mmZyH4dU/view?usp=sharing)
+- **MOT Evaluation Tools:** [TrackEval (Baidu Pan)](https://pan.baidu.com/s/1HtVB1-knH03Oyg1C24sJkg?pwd=liam) | [(Google Drive)](https://drive.google.com/file/d/1-fSvYEsoMzimAneF0hrtjcesbj19tI0w/view?usp=sharing)
 
 Follow the instructions provided with each toolkit to evaluate tracking results.
 
