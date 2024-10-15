@@ -304,4 +304,4 @@ This project is licensed under the [MIT License](LICENSE).
 
 For any questions or support, please open an [issue](https://github.com/Liamzh0331/Unismot/issues) or contact the maintainer:
 
-- **Lian Zhang**: [liamzh0331[AT]gmail.com](mailto:liamzh0331@gmail.com)
+- **Lian Zhang**: [liamzh0331[AT]gmail.com](mailto:liamzh0331@gmail.com) or [liamzh0331[AT]qq.com](mailto:liamzh0331@qq.com).
